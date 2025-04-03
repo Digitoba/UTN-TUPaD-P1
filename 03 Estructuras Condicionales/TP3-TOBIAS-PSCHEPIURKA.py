@@ -147,67 +147,35 @@
 # del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla
 # si el usuario se encuentra en otoño, invierno, primavera o verano.
 
-# hemisferio = str(input("Ingrese el hemisferio en el que se encuentra: ").lower())
-# dia = int(input("Ingrese el día actual: "))
-# mes = int(input("Ingrese el mes actual: "))
+hemisferio = str(input("Ingrese el hemisferio en el que se encuentra: ").lower())
+dia = int(input("Ingrese el día actual: "))
+mes = int(input("Ingrese el mes actual: "))
 
-# dic = [12]
-# eneFeb = [1, 2]
-# mar = [3]
-# abrMay = [4, 5]
-# jun = [6]
-# julAgo = [7, 8]
-# sep = [9]
-# octNov = [10, 11]
+dic = [12]
+eneFeb = [1, 2]
+mar = [3]
+abrMay = [4, 5]
+jun = [6]
+julAgo = [7, 8]
+sep = [9]
+octNov = [10, 11]
 
-# # Condicional anidado
-# if hemisferio == "sur":
-#     if mes in dic and dia >= 21:
-#         print("Es verano.")
-#     elif mes in eneFeb:
-#         print("Es verano.")
-#     elif mes in mar and dia <= 20:
-#         print("Es verano.")
-#     elif mes in mar and dia >= 21:
-#         print("Es otoño.")
-#     elif mes in abrMay:
-#         print("Es otoño.")
-#     elif mes in jun and dia <= 20:
-#         print("Es otoño.")
-#     elif mes in jun and dia >= 21:
-#         print("Es invierno.")
-#     elif mes in julAgo:
-#         print("Es invierno.")
-#     elif mes in sep and dia <= 20:
-#         print("Es invierno.")
-#     elif mes in sep and dia >= 21:
-#         print("Es primavera.")
-#     elif mes in octNov:
-#         print("Es primavera.")
-#     elif mes in dic and dia <= 20:
-#         print ("Es primavera.")
-# else:
-#     if mes in dic and dia >= 21:
-#         print("Es invierno.")
-#     elif mes in eneFeb:
-#         print("Es invierno.")
-#     elif mes in mar and dia <= 20:
-#         print("Es invierno.")
-#     elif mes in mar and dia >= 21:
-#         print("Es primavera.")
-#     elif mes in abrMay:
-#         print("Es primavera.")
-#     elif mes in jun and dia <= 20:
-#         print("Es primavera.")
-#     elif mes in jun and dia >= 21:
-#         print("Es verano.")
-#     elif mes in julAgo:
-#         print("Es verano.")
-#     elif mes in sep and dia <= 20:
-#         print("Es verano.")
-#     elif mes in sep and dia >= 21:
-#         print("Es otoño.")
-#     elif mes in octNov:
-#         print("Es otoño.")
-#     elif mes in dic and dia <= 20:
-#         print ("Es otoño.")
+# Condicional anidado
+if hemisferio == "sur":
+    if mes in dic and dia >= 21 or mes in eneFeb or mes in mar and dia <= 20:
+        print("Es verano.")
+    elif mes in mar and dia >= 21 or mes in abrMay or mes in jun and dia <= 20:
+        print("Es otoño.")
+    elif mes in jun and dia >= 21 or mes in julAgo or mes in sep and dia <= 20:
+        print("Es invierno.")
+    elif mes in sep and dia >= 21 or mes in octNov or mes in dic and dia <= 20:
+        print("Es primavera.")
+else:
+    if mes in dic and dia >= 21 or mes in eneFeb or mes in mar and dia <= 20:
+        print("Es invierno.")
+    elif mes in mar and dia >= 21 or mes in abrMay or mes in jun and dia <= 20:
+        print("Es primavera.")
+    elif mes in jun and dia >= 21 or mes in julAgo or mes in sep and dia <= 20:
+        print("Es verano.")
+    elif mes in sep and dia >= 21 or mes in octNov or mes in dic and dia <= 20:
+        print("Es otoño.")
